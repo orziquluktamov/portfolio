@@ -1,563 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Personal, Portfolio, Frontend, Developer">
+    <meta name="description" content="Stefan Mrvic Frontend Portfolio">
+    <meta name="author" content="Stefan Mrvic">
+    <title>Orziqul Uktamov | Frontend Developer</title>
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap" rel="stylesheet">
+    <!--CSS File-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Inline Style For Fonts / Improved Load Speed-->
+    <style>
+        @font-face {
+            font-family: 'League Spartan';
+            src: url('../font/leaguespartan-bold.eot');
+            src: url('../font/leaguespartan-bold.woff2') format('woff2'),
+                 url('../font/leaguespartan-bold.woff') format('woff'),
+                 url('../font/leaguespartan-bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
 </head>
-<body class="main-content">
-    <header class="container header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="" alt="">
-                </div>
+
+<body>
+
+    <!--Preloader Start-->
+    <div class="preloader">
+        <div class="loader">Loading...</div>
+    </div>
+    <!--Preloader End-->
+
+    <!--Header Start-->
+    <header id="header" class="header">
+        <!--Nav Start-->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!--LOGO-->
+                <a href="index.html" class="navbar__logo">
+                    Orziqul
+                </a>
+                <!--Navbar Start-->
+                <ul class="navbar__nav">
+                    <li class="navbar__item">
+                        <a href="#projects" class="navbar__link">Projects</a></li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link open-contact">Skills</a></li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link open-contact">Contact</a></li>
+                </ul>
+                <!--Navbar End-->
             </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Hi, I'm <span>Solano Milan Diaz.</span>
-                    A Web Developer.
-                </h1>
-                <p>
-                    I'm a Web Developer, I love to create beautiful and functional websites.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, libero?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque blanditiis sed aut!
-                </p>
-                <div class="btn-con">
-                    <a href="" class="main-btn">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                </div>
+        </nav>
+        <!--Nav End-->
+
+        <!--Landing Page Text Content-->
+        <div class="header__text-box">
+            <h1 class="header__text-box-caption">Hi, I am Orziqul.</h1>
+            <p class="header__text-box-text">Creative & Adventurous Front-end Developer.</p>
+            <!--About Me Button Container-->
+            <div id="about-main" class="header__about">
+                <a href="#" class="header__about-button open-contact">
+                    <span class="header__about-button-text">About Me</span>
+                    <span class="header__about-button-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213">
+                            <path
+                                d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
+                            </path>
+                        </svg>
+                    </span>
+                </a>
             </div>
         </div>
+
+        <!--Social Icons Start-->
+        <ul class="header__social">
+            <li class="header__social-item"><a href="#" target="_blank" class="header__social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 430.117 430.117">
+                        <path
+                            d="M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z">
+                        </path>
+                    </svg></a>
+                </a></li>
+            <li class="header__social-item"><a href="#" target="_blank" class="header__social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 438.549 438.549">
+                        <path
+                            d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z">
+                        </path>
+                    </svg></a>
+                </a></li>
+            <li class="header__social-item"><a href="#" target="_blank" class="header__social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 1280.000000 1280.000000"
+                        preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                            <path d="M680 9996 c8 -7 944 -706 2080 -1552 1136 -846 2411 -1796 2834
+                                     -2111 l769 -573 31 23 c17 13 1296 966 2841 2117 1546 1151 2814 2097 2819
+                                     2102 6 4 -2555 8 -5689 8 -4821 0 -5697 -2 -5685 -14z" />
+                            <path d="M626 7018 c-4 -1366 -6 -2856 -4 -3311 l3 -828 1146 1308 c631 719
+                                     1421 1621 1757 2005 l610 696 -1721 1283 c-947 705 -1736 1293 -1753 1306
+                                     l-32 23 -6 -2482z" />
+                            <path d="M12065 9482 c-11 -10 -789 -592 -1730 -1292 -940 -700 -1718 -1280
+                                     -1727 -1289 -16 -15 2 -39 290 -367 169 -193 955 -1090 1747 -1994 l1440
+                                     -1643 3 1652 c1 908 1 2394 0 3301 -3 1650 -3 1651 -23 1632z" />
+                            <path d="M7335 5955 c-533 -398 -974 -721 -980 -717 -5 3 -441 327 -967 719
+                                     -527 392 -962 713 -967 713 -5 0 -762 -858 -1681 -1907 l-1672 -1908 2652 -3
+                                     c1458 -1 3841 -1 5295 0 l2643 3 -1669 1905 c-919 1048 -1673 1908 -1677 1912
+                                    -4 3 -443 -319 -977 -717z" />
+                        </g>
+                    </svg>
+                </a></li>
+        </ul>
+        <!--Social Icons End-->
+
+        <!--Container for Arrow Button-->
+        <a href="#projects" class="header__projects-button">
+            <div class="projects-button__text">Projects</div>
+            <span class="projects-button__arrow"></span>
+        </a>
+
     </header>
+    <!--Header End-->
+
     <main>
-        <section class="container about" id="about">
-            <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+        <!--Projects Section Start-->
+        <section id="projects" class="section-projects">
+            <div class="projects__intro">
+                <h4 class="projects__intro-subtitle">My Works</h4>
+                <h2 class="projects__intro-text">Latest Projects</h2>
             </div>
-            <div class="about-container">
-                <div class="left-about">
-                    <h4>Information About me</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Eveniet labore nihil obcaecati consequatur. Debitis error doloremque, 
-                        vero eos vel nemo eius voluptatem dicta tenetur modi. <br /> <br /> La musica
-                        delectus dolore fugiat exercitationem a, 
-                        ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Harum non necessitatibus deleniti eum soluta.
-                    </p>
-                    <div class="btn-con">
-                        <a href="#" class="main-btn">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
-                        </a>
+
+            <!--Projects Boxes Start-->
+            <ul class="projects__container">
+            <!--Project-1 Start-->
+            <li class="projects__item">
+                <a href="#" class="projects__item-1">
+                    <div class="projects__number-wrap">
+                        <span class="projects__text-box-number--1" data-index="01">01</span>
                     </div>
-                </div>
-                <div class="right-about">
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">650+</p>
-                            <p class="small-text">Projects <br /> Completed</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">10+</p>
-                            <p class="small-text">Years of <br /> experience</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">300+</p>
-                            <p class="small-text">Happy <br /> Clients</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">400+</p>
-                            <p class="small-text">Customer <br /> reviews</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-stats">
-                <h4 class="stat-title">My Skills</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">html5</p>
-                        <div class="progress-con">
-                            <p class="prog-text">80%</p>
-                            <div class="progress">
-                                <span class="html"></span>
+                    <div class="projects__text-box">
+                        <h3 class="projects__text-box-caption">Hi, I am Orziqul.</h3>
+                        <h5 class="projects__text-box-text">Creative & Adventurous Front-end Developer.</h5>
+                        <!--View Project Button Container-->
+                        <div class="projects__view">
+                            <div class="projects__view-button">
+                                <span class="projects__view-button-text--1">View Project</span>
+                                <span class="projects__view-button-icon--1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213">
+                                        <path
+                                            d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
+                                        </path>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                     </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">css3</p>
-                        <div class="progress-con">
-                            <p class="prog-text">95%</p>
-                            <div class="progress">
-                                <span class="css"></span>
+                </a>
+            </li>
+            <!--Project-1 End-->
+        
+            <!--Project-2 Start-->
+            <li class="projects__item">
+                    <a href="#" class="projects__item-2">
+                        <div class="projects__number-wrap">
+                            <span class="projects__text-box-number--2" data-index="02">02</span>
+                        </div>
+                        <div class="projects__text-box">
+                            <h3 class="projects__text-box-caption">Hi, I am some dude.</h3>
+                            <h5 class="projects__text-box-text">I am total badass Bro.</h5>
+                            <!--View Project Button Container-->
+                            <div class="projects__view">
+                                <div class="projects__view-button">
+                                    <span class="projects__view-button-text--2">View Project</span>
+                                    <span class="projects__view-button-icon--2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213">
+                                            <path
+                                                d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">javascript</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="js"></span>
+                    </a>
+                </li>
+                <!--Project-2 End-->
+
+                <!--Project-3 Start-->
+                <li class="projects__item">
+                    <a href="#" class="projects__item-3">
+                        <div class="projects__number-wrap">
+                            <span class="projects__text-box-number--3" data-index="03">03</span>
+                        </div>
+                        <div class="projects__text-box">
+                            <h3 class="projects__text-box-caption">Hi, Ricky.</h3>
+                            <h5 class="projects__text-box-text">I love popstickles.</h5>
+                            <!--View Project Button Container-->
+                            <div class="projects__view">
+                                <div class="projects__view-button">
+                                    <span class="projects__view-button-text--3">View Project</span>
+                                    <span class="projects__view-button-icon--3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213">
+                                            <path
+                                                d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">ReactJS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="react"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">NodeJS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">87%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Python</p>
-                        <div class="progress-con">
-                            <p class="prog-text">70%</p>
-                            <div class="progress">
-                                <span class="python"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="stat-title">My Timeline</h4>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2010 - present</p>
-                    <h5>Web Developer<span> - Vircrosoft</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2008 - 2011</p>
-                    <h5>Software Engineer<span> - Boogle, Inc.</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2016 - 2017</p>
-                    <h5>C++ Programmer<span> - Slime Tech</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2009 - 2013</p>
-                    <h5>Business Degree<span> - Sussex University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2013 - 2016</p>
-                    <h5>Computer Science Degree<span> - Brookes University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2017 - present</p>
-                    <h5>3d Animation<span> - Brighton University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-            </div>
+                    </a>
+                </li>
+                <!--Project-3 End-->
+                </ul>
+                <!--Projects Boxes End-->
         </section>
-        <section class="container" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
-            </div>
-            <p class="port-text">
-                Here is some of my work that I've done in various programming languages.
-            </p>
-            <div class="portfolios">
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port1.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port2.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port3.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port4.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port5.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port2.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port7.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container" id="blogs">
-            <div class="blogs-content">
-                <div class="main-title">
-                    <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
-                </div>
-                <div class="blogs">
-                    <div class="blog">
-                        <img src="img/port6.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                How to Create Your Own Website
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/blog1.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                How to Become an Expert in Web Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/blog2.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Become a Web Designer in 10 Days
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/blog3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Debbuging made easy with Web Inspector
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port1.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Get started with Web Design and UI Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                This is what you need to know about Web Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
-                </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4>Contact me here</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            In, laborum numquam? Quam excepturi perspiciatis quas quasi.
-                        </p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
-                                </div>
-                                <p>
-                                    : London, united Kingdom
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span>: maclinzuniversal@gmail.com</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Education</span>
-                                </div>
-                                <p>
-                                    <span>: Sussex University, East Sussex</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span>: 07522670617</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span>: Afrikaans, English, Spanish</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="www.facebook.com" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right-contact">
-                        <form action="" class="contact-form">
-                            <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME">
-                                <input type="email" required placeholder="YOUR EMAIL">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
-                            </div>
-                            <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
-                            </div>
-                            <div class="submit-btn">
-                                <a href="#" class="main-btn">
-                                    <span class="btn-text">Download CV</span>
-                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!--Projects Section End-->
+
     </main>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home" >
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="blogs">
-            <i class="far fa-newspaper"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
+    <!--About-Me Start-->
+    <div class="about-me">
+        <!--About Me Info Start-->
+        <div id="about" class="about-me__about-container-closed">
+            <div class="about-me__about-giga">About</div>
+        <div class="about-me__about">
+            <h3 class="about-me__about-title">About Me.</h3>
+            <h4 class="about-me__about-subtitle">Adventurous Front-end developer.</h4>
+            <p class="about-me__about-text">I'm Orziqul Uktamov, a 22-year-old <strong>Front-end developer</strong>.
+                I'm always hungry to learn new stuff, so I can express my creativity better through web technologies. 
+                <br>I like to use creative thinking to <strong>resolve</strong> design problems, coding challenges, and everything else that's in the way of <strong>bringing an idea to life.</strong>
+                <br>When not working or futzing around with code, I like to run in the early morning by the river. Available <strong>for hire.</strong></p>
+            <h3 class="about-me__about-skills">Skills</h3>
+            <ul class="about-me__about-icons__box--1">
+                <!--HTML5 Icon-->
+                <li class="about-me__about-icon">
+                        <svg class="about-me__about-icon--1" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
+                        </svg>
+                        <div class="about-me__about-icon__text--1">HTML5</div>
+                </li>
+                <!--CSS3 Icon-->
+                <li class="about-me__about-icon">
+                        <svg class="about-me__about-icon--2" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
+                        </svg>
+                        <div class="about-me__about-icon__text--2">CSS3</div>
+                </li>
+                <!--BootStrap Icon-->
+                <li class="about-me__about-icon">
+                        <svg class="about-me__about-icon--3"  role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 0H4C1.793.006.006 1.793 0 4v16c0 2.2 1.8 4 4 4h16c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zm-2.187 16.855c-.2.482-.517.907-.923 1.234-.42.34-.952.62-1.607.82-.654.203-1.432.305-2.333.305H6.518v-14h6.802c1.258 0 2.266.283 3.02.86.76.58 1.138 1.444 1.138 2.61 0 .705-.172 1.31-.518 1.81-.344.497-.84.886-1.48 1.156v.046c.854.18 1.515.585 1.95 1.215s.658 1.426.658 2.387c0 .538-.104 1.05-.3 1.528l.025.027zm-2.776-3.45c-.41-.375-.986-.558-1.73-.558H8.985v4.368h4.334c.74 0 1.32-.192 1.73-.58.41-.385.62-.934.62-1.64-.007-.69-.21-1.224-.62-1.59h-.017zm-.6-2.823c.396-.336.59-.817.59-1.444 0-.704-.175-1.204-.53-1.49-.352-.285-.86-.433-1.528-.433h-4v3.863h4c.583 0 1.08-.17 1.464-.496z"/>
+                        </svg>
+                        <div class="about-me__about-icon__text--3">Bootstrap 4</div>
+                </li>
+                <!--SaSS Icon-->
+                <li class="about-me__about-icon">
+                        <svg class="about-me__about-icon--4"  role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 464">
+                            <path d="M440.6 220.6c-17.9.101-33.4 4.4-46.4 10.801-4.8-9.5-9.6-17.801-10.399-24-.9-7.2-2-11.601-.9-20.2C384 178.6 389 166.4 389 165.4c-.101-.9-1.101-5.3-11.4-5.4s-19.2 2-20.2 4.7-3 8.9-4.3 15.3c-1.8 9.4-20.6 42.7-31.3 60.2-3.5-6.8-6.5-12.8-7.101-17.601-.899-7.199-2-11.6-.899-20.199 1.1-8.601 6.1-20.8 6.1-21.8-.1-.9-1.1-5.3-11.399-5.4-10.301-.1-19.2 2-20.2 4.7s-2.1 9.1-4.3 15.3C281.9 201.4 256.9 257 250.4 271.5c-3.3 7.4-6.199 13.3-8.3 17.3-2.1 4-.1.3-.3.7-1.8 3.4-2.8 5.3-2.8 5.3v.101c-1.4 2.5-2.9 4.899-3.601 4.899-.5 0-1.5-6.7.2-15.899 3.7-19.301 12.7-49.4 12.601-50.5 0-.5 1.699-5.801-5.801-8.5-7.3-2.7-9.899 1.8-10.5 1.8-.6 0-1.1 1.6-1.1 1.6s8.1-33.899-15.5-33.899c-14.8 0-35.2 16.1-45.3 30.8-6.4 3.5-20 10.899-34.4 18.8-5.5 3-11.2 6.2-16.6 9.1L117.9 251.9c-28.6-30.5-81.5-52.1-79.3-93.1.8-14.9 6-54.2 101.601-101.8 78.3-39 141-28.3 151.899-4.5 15.5 34-33.5 97.2-114.899 106.3-31 3.5-47.301-8.5-51.4-13-4.3-4.7-4.9-4.9-6.5-4-2.6 1.4-1 5.6 0 8.1 2.4 6.3 12.4 17.5 29.4 23.1 14.899 4.9 51.3 7.6 95.3-9.4 49.3-19.1 87.8-72.1 76.5-116.4-11.5-45.1-86.3-59.9-157-34.8C121.4 27.4 75.8 50.8 43 81.5 4 117.9-2.2 149.7.4 162.9c9.101 47.1 74 77.8 100 100.5-1.3.699-2.5 1.399-3.6 2-13 6.399-62.5 32.3-74.9 59.699-14 31 2.2 53.301 13 56.301 33.4 9.3 67.6-7.4 86.1-34.9 18.399-27.5 16.2-63.2 7.7-79.5l-.301-.6 10.2-6c6.601-3.9 13.101-7.5 18.8-10.601-3.199 8.7-5.5 19-6.699 34-1.4 17.601 5.8 40.4 15.3 49.4 4.2 3.899 9.2 4 12.3 4 11 0 16-9.101 21.5-20 6.8-13.3 12.8-28.7 12.8-28.7s-7.5 41.7 13 41.7c7.5 0 15-9.7 18.4-14.7v.1s.2-.3.6-1a36.13 36.13 0 0 0 1.2-1.899v-.2c3-5.2 9.7-17.1 19.7-36.8 12.899-25.4 25.3-57.2 25.3-57.2s1.2 7.8 4.9 20.6c2.199 7.601 6.999 15.9 10.699 24-3 4.2-4.8 6.601-4.8 6.601l.1.1c-2.399 3.2-5.1 6.601-7.899 10-10.2 12.2-22.4 26.101-24 30.101-1.9 4.699-1.5 8.199 2.2 11 2.7 2 7.5 2.399 12.6 2 9.2-.601 15.6-2.9 18.8-4.301 5-1.8 10.7-4.5 16.2-8.5 10-7.399 16.1-17.899 15.5-31.899-.3-7.7-2.8-15.3-5.9-22.5.9-1.3 1.801-2.601 2.7-4 15.8-23.101 28-48.5 28-48.5s1.2 7.8 4.9 20.6c1.899 6.5 5.7 13.601 9.1 20.601-14.8 12.1-24.1 26.1-27.3 35.3-5.9 17-1.3 24.7 7.4 26.5 3.899.8 9.5-1 13.699-2.8 5.2-1.7 11.5-4.601 17.301-8.9 10-7.4 19.6-17.7 19.1-31.6-.3-6.4-2-12.7-4.3-18.7 12.6-5.2 28.899-8.2 49.6-5.7 44.5 5.2 53.3 33 51.601 44.6-1.7 11.601-11 18-14.101 20-3.1 1.9-4.1 2.601-3.8 4 .4 2.101 1.8 2 4.5 1.601 3.7-.601 23.4-9.5 24.2-30.899 1.2-27.504-24.9-57.504-71.2-57.205zM97.4 336.3c-14.7 16.1-35.4 22.2-44.2 17-9.5-5.5-5.801-29.2 12.3-46.3 11-10.4 25.3-20 34.7-25.9 2.1-1.3 5.3-3.199 9.1-5.5.6-.399 1-.6 1-.6.7-.4 1.5-.9 2.3-1.4 6.7 24.4.3 45.8-15.2 62.7zm107.5-73.1c-5.1 12.5-15.9 44.6-22.4 42.8-5.601-1.5-9-25.8-1.101-49.8 4-12.101 12.5-26.5 17.5-32.101 8.101-9 16.9-12 19.101-8.3 2.6 4.801-9.9 39.601-13.1 47.401zm88.7 42.4c-2.2 1.101-4.2 1.9-5.1 1.301-.7-.4.899-1.9.899-1.9s11.1-11.9 15.5-17.4c2.5-3.199 5.5-6.899 8.7-11.1v1.2C313.6 292.1 299.8 301.7 293.6 305.6zm68.399-15.6c-1.6-1.2-1.399-4.9 4-16.5 2.101-4.6 6.9-12.3 15.2-19.6 1 3 1.601 5.899 1.5 8.6-.099 18-12.899 24.7-20.7 27.5z"/>
+                        </svg>
+                        <div class="about-me__about-icon__text--4">Preprocessor</div>
+                </li>
+                <!--BEM Icon-->
+                <li class="about-me__about-icon">
+                        <svg class="about-me__about-icon--5" xmlns="http://www.w3.org/2000/svg"  role="img" viewBox="350 0 500 500">
+                     <path d="  M 325.00,22.00
+                                C 325.00,22.00 325.00,414.00 325.00,414.00
+                                325.00,414.00 576.00,414.00 576.00,414.00
+                                617.84,413.93 649.94,379.18 650.00,338.00
+                                650.00,338.00 650.00,226.00 650.00,226.00
+                                649.79,182.55 615.60,151.50 573.00,151.00
+                                573.00,151.00 455.00,151.00 455.00,151.00
+                                455.00,151.00 455.00,22.00 455.00,22.00
+                                455.00,22.00 325.00,22.00 325.00,22.00 Z
+                              M 649.00,412.00
+                              C 649.00,412.00 649.00,478.00 649.00,478.00
+                                649.00,478.00 874.00,478.00 874.00,478.00
+                                874.00,478.00 874.00,412.00 874.00,412.00
+                                874.00,412.00 649.00,412.00 649.00,412.00 Z" />
+                   </svg>
+                   <div class="about-me__about-icon__text--5">BEM Methodology</div>
+                </li>
+            </ul>
+            <ul class="about-me__about-icons__box--2">
+                <!--JavaScript icon-->
+                <li class="about-me__about-icon">
+                    <svg class="about-me__about-icon--6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+                    </svg>
+                    <div class="about-me__about-icon__text--6">Semicolons</div>
+                </li>
+                <!--JQuery icon-->
+                <!-- <li class="about-me__about-icon">
+                    <svg class="about-me__about-icon--7" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M1.534 5.874c-2.123 3.05-1.86 7.017-.237 10.256.037.079.078.154.118.229.023.052.049.1.077.149.013.028.031.057.047.083.026.052.054.102.081.152l.157.265c.029.049.057.097.09.146.055.094.12.187.177.281.026.039.05.078.079.117a6.36 6.36 0 0 0 .31.444c.078.107.156.211.24.315.027.038.057.076.085.114l.221.269c.027.031.054.067.083.099.098.118.202.233.306.349 0 .002.003.004.005.007a3.13 3.13 0 0 0 .424.44c.08.082.16.164.245.244l.101.097c.111.104.222.208.339.308.002 0 .003.002.005.003l.057.05c.102.089.205.178.31.26l.125.105c.085.068.173.133.26.2l.136.104c.093.07.192.139.287.207.035.025.07.05.106.073l.029.023.281.185.12.08c.147.094.293.183.438.271.042.021.084.044.123.068.108.062.22.125.329.183.06.034.122.063.184.094.075.042.153.083.233.125a.324.324 0 0 1 .056.023c.033.015.064.031.096.047.12.06.245.117.375.174.024.01.05.02.076.034.144.063.288.123.437.182.034.01.07.027.105.04.135.051.274.103.411.152l.05.018c.153.052.304.102.459.15.036.01.073.023.111.033.159.048.313.105.473.136 10.26 1.87 13.242-6.169 13.242-6.169-2.505 3.262-6.95 4.122-11.16 3.165-.156-.036-.312-.086-.469-.132a13.522 13.522 0 0 1-.567-.181l-.062-.024c-.136-.046-.267-.097-.4-.148a1.613 1.613 0 0 0-.11-.041c-.147-.059-.29-.12-.432-.183-.031-.01-.057-.024-.088-.036a23.41 23.41 0 0 1-.361-.17c-.037-.016-.07-.033-.106-.052-.094-.044-.188-.094-.28-.142a3.942 3.942 0 0 1-.187-.096c-.113-.06-.226-.125-.339-.187-.034-.024-.073-.044-.112-.066a15.902 15.902 0 0 1-.438-.269 2.104 2.104 0 0 1-.118-.079 6.002 6.002 0 0 1-.312-.206c-.035-.023-.067-.048-.103-.073a9.541 9.541 0 0 1-.294-.212c-.042-.034-.087-.066-.132-.1-.088-.069-.177-.135-.265-.208l-.118-.094a10.58 10.58 0 0 1-.334-.281.258.258 0 0 0-.037-.03l-.347-.316-.1-.094c-.082-.083-.166-.163-.25-.245l-.097-.1a9.07 9.07 0 0 1-.309-.323l-.015-.016c-.106-.116-.209-.234-.313-.354-.027-.031-.052-.064-.08-.097l-.226-.277a21.248 21.248 0 0 1-.34-.448C2.16 11.786 1.315 7.386 3.184 3.777M8.121 3.305c-1.539 2.209-1.452 5.163-.254 7.499a9.1 9.1 0 0 0 .677 1.132c.23.33.484.72.792.986.107.122.223.24.344.359l.09.09c.114.11.231.218.35.325l.015.013a9.855 9.855 0 0 0 .414.342c.034.023.063.05.096.073.14.108.281.212.427.315l.015.009c.062.045.128.086.198.13.028.018.06.042.09.06.106.068.21.132.317.197.017.007.032.016.048.023.09.055.188.108.282.157.033.02.065.035.099.054.067.033.133.068.197.102l.032.014c.135.066.273.128.408.19.034.013.063.024.092.038.111.048.224.094.335.137.05.017.097.037.144.052.102.038.209.073.31.108l.14.045c.146.045.294.104.448.129 7.92 1.313 9.754-4.787 9.754-4.787-1.651 2.376-4.846 3.508-8.251 2.624a8.03 8.03 0 0 1-.448-.13c-.048-.013-.09-.028-.136-.042-.104-.036-.211-.071-.312-.109l-.144-.054c-.112-.045-.226-.087-.335-.135-.034-.015-.065-.025-.091-.04-.14-.063-.281-.125-.417-.192l-.206-.107-.119-.06c-.092-.048-.177-.098-.265-.15a.62.62 0 0 1-.062-.034c-.106-.066-.216-.13-.317-.198-.034-.019-.065-.042-.097-.062l-.208-.136c-.144-.1-.285-.208-.427-.312-.032-.029-.063-.053-.094-.079-1.497-1.177-2.678-2.786-3.238-4.608-.59-1.894-.46-4.018.559-5.742M13.66 1.384c-.908 1.332-.995 2.986-.37 4.455.664 1.56 2.022 2.785 3.604 3.365.065.025.128.046.195.07l.088.027c.092.029.185.063.28.084 4.376.844 5.56-2.247 5.879-2.701-1.042 1.496-2.789 1.855-4.932 1.334a4.844 4.844 0 0 1-.516-.16 6.344 6.344 0 0 1-.617-.254 6.521 6.521 0 0 1-1.08-.66c-1.92-1.454-3.109-4.23-1.857-6.491"/>
+                    </svg>
+                    <div class="about-me__about-icon__text--7">JQuery</div>
+                </li>
+                <!--WordPress Icon-->
+                <!-- <li class="about-me__about-icon">
+                    <svg class="about-me__about-icon--8" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/>
+                    </svg>
+                    <div class="about-me__about-icon__text--8">WordPress</div>
+                </li> --> 
+            </ul>
+            <h3 class="about-me__about-learning">Currently Learning</h3>
+            <ul class="about-me__about-icons__box--3">
+                <li class="about-me__about-icon">
+                    <svg class="about-me__about-icon--9" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 9.861A2.139 2.139 0 1 0 12 14.139 2.139 2.139 0 1 0 12 9.861zM6.008 16.255l-.472-.12C2.018 15.246 0 13.737 0 11.996s2.018-3.25 5.536-4.139l.472-.119.133.468a23.53 23.53 0 0 0 1.363 3.578l.101.213-.101.213a23.307 23.307 0 0 0-1.363 3.578l-.133.467zM5.317 8.95c-2.674.751-4.315 1.9-4.315 3.046 0 1.145 1.641 2.294 4.315 3.046a24.95 24.95 0 0 1 1.182-3.046A24.752 24.752 0 0 1 5.317 8.95zM17.992 16.255l-.133-.469a23.357 23.357 0 0 0-1.364-3.577l-.101-.213.101-.213a23.42 23.42 0 0 0 1.364-3.578l.133-.468.473.119c3.517.889 5.535 2.398 5.535 4.14s-2.018 3.25-5.535 4.139l-.473.12zm-.491-4.259c.48 1.039.877 2.06 1.182 3.046 2.675-.752 4.315-1.901 4.315-3.046 0-1.146-1.641-2.294-4.315-3.046a24.788 24.788 0 0 1-1.182 3.046zM5.31 8.945l-.133-.467C4.188 4.992 4.488 2.494 6 1.622c1.483-.856 3.864.155 6.359 2.716l.34.349-.34.349a23.552 23.552 0 0 0-2.422 2.967l-.135.193-.235.02a23.657 23.657 0 0 0-3.785.61l-.472.119zm1.896-6.63c-.268 0-.505.058-.705.173-.994.573-1.17 2.565-.485 5.253a25.122 25.122 0 0 1 3.233-.501 24.847 24.847 0 0 1 2.052-2.544c-1.56-1.519-3.037-2.381-4.095-2.381zM16.795 22.677c-.001 0-.001 0 0 0-1.425 0-3.255-1.073-5.154-3.023l-.34-.349.34-.349a23.53 23.53 0 0 0 2.421-2.968l.135-.193.234-.02a23.63 23.63 0 0 0 3.787-.609l.472-.119.134.468c.987 3.484.688 5.983-.824 6.854a2.38 2.38 0 0 1-1.205.308zm-4.096-3.381c1.56 1.519 3.037 2.381 4.095 2.381h.001c.267 0 .505-.058.704-.173.994-.573 1.171-2.566.485-5.254a25.02 25.02 0 0 1-3.234.501 24.674 24.674 0 0 1-2.051 2.545zM18.69 8.945l-.472-.119a23.479 23.479 0 0 0-3.787-.61l-.234-.02-.135-.193a23.414 23.414 0 0 0-2.421-2.967l-.34-.349.34-.349C14.135 1.778 16.515.767 18 1.622c1.512.872 1.812 3.37.824 6.855l-.134.468zM14.75 7.24c1.142.104 2.227.273 3.234.501.686-2.688.509-4.68-.485-5.253-.988-.571-2.845.304-4.8 2.208A24.849 24.849 0 0 1 14.75 7.24zM7.206 22.677A2.38 2.38 0 0 1 6 22.369c-1.512-.871-1.812-3.369-.823-6.854l.132-.468.472.119c1.155.291 2.429.496 3.785.609l.235.02.134.193a23.596 23.596 0 0 0 2.422 2.968l.34.349-.34.349c-1.898 1.95-3.728 3.023-5.151 3.023zm-1.19-6.427c-.686 2.688-.509 4.681.485 5.254.987.563 2.843-.305 4.8-2.208a24.998 24.998 0 0 1-2.052-2.545 24.976 24.976 0 0 1-3.233-.501zM12 16.878c-.823 0-1.669-.036-2.516-.106l-.235-.02-.135-.193a30.388 30.388 0 0 1-1.35-2.122 30.354 30.354 0 0 1-1.166-2.228l-.1-.213.1-.213a30.3 30.3 0 0 1 1.166-2.228c.414-.716.869-1.43 1.35-2.122l.135-.193.235-.02a29.785 29.785 0 0 1 5.033 0l.234.02.134.193a30.006 30.006 0 0 1 2.517 4.35l.101.213-.101.213a29.6 29.6 0 0 1-2.517 4.35l-.134.193-.234.02c-.847.07-1.694.106-2.517.106zm-2.197-1.084c1.48.111 2.914.111 4.395 0a29.006 29.006 0 0 0 2.196-3.798 28.585 28.585 0 0 0-2.197-3.798 29.031 29.031 0 0 0-4.394 0 28.477 28.477 0 0 0-2.197 3.798 29.114 29.114 0 0 0 2.197 3.798z"/>\
+                    </svg>
+                    <div class="about-me__about-icon__text--9">React.js</div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
+    <!--About Me Info End-->
+
+        <!--About Me Contact Start-->
+        <div id="contact" class="about-me__contact-container-closed">
+        <div class="about-me__contact">
+            <h3 class="about-me__contact-title">Let's talk.</h3>
+            <p class="about-me__contact-subtitle">New projects, freelance inquiry or even a coffee.</p>
+            <div class="about-me__contact-form">
+                <!--Contact Form Start-->
+                <form action="#" class="about-me__form">
+                    <div class="about-me__form-name">
+                        <input class="about-me__form-input" type="text" id="name" name="name" required>
+                        <label class="about-me__form-label--1" for="name">Name</label>
+                    </div>
+                    <div class="about-me__form-email">
+                        <input class="about-me__form-input" type="email"  id="email" name="email" required>
+                        <label class="about-me__form-label--2" for="email">E-mail</label>
+                    </div>
+                    <div class="about-me__form-message">
+                        <textarea  class="about-me__form-input" id="message" name="message" required></textarea>
+                        <label class="about-me__form-label--3" for="message">Message</label>
+                    </div>
+                    <button class="about-me__form-button" disabled>Send Message</button>
+                </form>
+                <!--Contact Form End-->
+            </div>
+        </div>
+        <div class="about-me__contact-giga">Contact</div>
+        <!--Closing Button on Contact Side-->
+        <div class="about-me__contact-close">
+            <span class="about-me__contact-close--1"></span>
+            <span class="about-me__contact-close--2"></span>
+        </div>
+        </div>
+        <!--About Me Contact End-->
+        </div>
     </div>
-    <script src="app.js"></script>
+    <!--About-Me End-->
+
+    <!--Footer Start-->
+    <footer class="footer">
+        <div class="footer__container">
+             <!--Footer LOGO-->
+                <a href="#header" class="footer__logo">
+                    Orziqul.
+                </a>
+            <ul class="footer__navigation">
+                <li class="footer__item"><a href="#" class="footer__link">Linkedin</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Github</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Email</a></li>
+            </ul>
+            <div class="footer__copy">&copy; 2022 Orziqul Uktamov  - <a href="#" class="footer__contact">Contact</a></div>
+        </div>
+    </footer>
+    <!--Footer End-->
+    <script src="main.js"></script>
 </body>
+
 </html>
